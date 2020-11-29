@@ -39,6 +39,12 @@ class ViewController: UIViewController {
         isRecording = !isRecording
     }
     
+    @IBAction func transcribeButtonPressed(_ sender: UIButton) {
+        let vc = TranscriberViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     private func getRecordings() {
         recordings = recorderPlayer.getRecordings()
         tableView.reloadData()

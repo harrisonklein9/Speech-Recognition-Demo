@@ -18,6 +18,8 @@
 		2BDF42F72571F4FD004812E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF42F62571F4FD004812E1 /* Assets.xcassets */; };
 		2BDF42FA2571F4FD004812E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF42F82571F4FD004812E1 /* LaunchScreen.storyboard */; };
 		2BDF43042571F578004812E1 /* SpeechEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF43032571F578004812E1 /* SpeechEngine.swift */; };
+		2BE8F2AC2574070400C065BF /* TranscriberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE8F2AA2574070400C065BF /* TranscriberViewController.swift */; };
+		2BE8F2AD2574070400C065BF /* TranscriberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE8F2AB2574070400C065BF /* TranscriberViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		2BDF42F92571F4FD004812E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BDF42FB2571F4FD004812E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BDF43032571F578004812E1 /* SpeechEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechEngine.swift; sourceTree = "<group>"; };
+		2BE8F2AA2574070400C065BF /* TranscriberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriberViewController.swift; sourceTree = "<group>"; };
+		2BE8F2AB2574070400C065BF /* TranscriberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranscriberViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			children = (
 				2BDF42F12571F4FC004812E1 /* ViewController.swift */,
 				2B45D18525730EBD0095998D /* TranscriptionViewController.swift */,
+				2BE8F2AA2574070400C065BF /* TranscriberViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -59,6 +64,7 @@
 		2B45D18C25730ED20095998D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				2BE8F2AB2574070400C065BF /* TranscriberViewController.xib */,
 				2B45D18625730EBD0095998D /* TranscriptionViewController.xib */,
 				2BDF42F32571F4FC004812E1 /* Main.storyboard */,
 			);
@@ -174,6 +180,7 @@
 				2BDF42FA2571F4FD004812E1 /* LaunchScreen.storyboard in Resources */,
 				2BDF42F72571F4FD004812E1 /* Assets.xcassets in Resources */,
 				2BDF42F52571F4FC004812E1 /* Main.storyboard in Resources */,
+				2BE8F2AD2574070400C065BF /* TranscriberViewController.xib in Resources */,
 				2B45D18825730EBD0095998D /* TranscriptionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE8F2AC2574070400C065BF /* TranscriberViewController.swift in Sources */,
 				2B29D36D2572F56C00D794EA /* RecorderPlayer.swift in Sources */,
 				2B45D183257301100095998D /* Recording.swift in Sources */,
 				2BDF42F22571F4FC004812E1 /* ViewController.swift in Sources */,
