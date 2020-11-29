@@ -13,7 +13,7 @@
 		2B45D18825730EBD0095998D /* TranscriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B45D18625730EBD0095998D /* TranscriptionViewController.xib */; };
 		2BDF42EE2571F4FC004812E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF42ED2571F4FC004812E1 /* AppDelegate.swift */; };
 		2BDF42F02571F4FC004812E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF42EF2571F4FC004812E1 /* SceneDelegate.swift */; };
-		2BDF42F22571F4FC004812E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF42F12571F4FC004812E1 /* ViewController.swift */; };
+		2BDF42F22571F4FC004812E1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF42F12571F4FC004812E1 /* HomeViewController.swift */; };
 		2BDF42F52571F4FC004812E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF42F32571F4FC004812E1 /* Main.storyboard */; };
 		2BDF42F72571F4FD004812E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF42F62571F4FD004812E1 /* Assets.xcassets */; };
 		2BDF42FA2571F4FD004812E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF42F82571F4FD004812E1 /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		2BDF42EA2571F4FC004812E1 /* Speech Recognition Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech Recognition Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDF42ED2571F4FC004812E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BDF42EF2571F4FC004812E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2BDF42F12571F4FC004812E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BDF42F12571F4FC004812E1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2BDF42F42571F4FC004812E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BDF42F62571F4FD004812E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BDF42F92571F4FD004812E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		2B45D18A25730EC90095998D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2BDF42F12571F4FC004812E1 /* ViewController.swift */,
+				2BDF42F12571F4FC004812E1 /* HomeViewController.swift */,
 				2B45D18525730EBD0095998D /* TranscriptionViewController.swift */,
 				2BE8F2AA2574070400C065BF /* TranscriberViewController.swift */,
 			);
@@ -195,7 +195,7 @@
 				2BE8F2AC2574070400C065BF /* TranscriberViewController.swift in Sources */,
 				2B29D36D2572F56C00D794EA /* RecorderPlayer.swift in Sources */,
 				2B45D183257301100095998D /* Recording.swift in Sources */,
-				2BDF42F22571F4FC004812E1 /* ViewController.swift in Sources */,
+				2BDF42F22571F4FC004812E1 /* HomeViewController.swift in Sources */,
 				2BDF42EE2571F4FC004812E1 /* AppDelegate.swift in Sources */,
 				2B45D18725730EBD0095998D /* TranscriptionViewController.swift in Sources */,
 				2BDF42F02571F4FC004812E1 /* SceneDelegate.swift in Sources */,

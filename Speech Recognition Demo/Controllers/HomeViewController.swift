@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var recordButton: UIButton!
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recordings.count
     }
@@ -68,9 +68,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         vc.recording = recordings[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            do {
+                try FileManager.default.removeItem(at: recordings[indexPath.row].path)
+                recordings.remove(at: indexPath.row)
+                tableView.reloadData()
+            }
+            catch {
+                print("Error removing item: ", error.localizedDescription)
+            }
+        }
+    }
 }
 
-extension ViewController: RecorderPlayerDelegate {
+extension HomeViewController: RecorderPlayerDelegate {
     func recorderPlayer(_ recorderPlayer: RecorderPlayer, didFinishRecording: Bool) {
         isRecording = false
         getRecordings()
