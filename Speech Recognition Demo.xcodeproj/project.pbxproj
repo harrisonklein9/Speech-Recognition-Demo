@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B29D36D2572F56C00D794EA /* RecorderPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29D36C2572F56C00D794EA /* RecorderPlayer.swift */; };
+		2B45D183257301100095998D /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B45D182257301100095998D /* Recording.swift */; };
+		2B45D18725730EBD0095998D /* TranscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B45D18525730EBD0095998D /* TranscriptionViewController.swift */; };
+		2B45D18825730EBD0095998D /* TranscriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B45D18625730EBD0095998D /* TranscriptionViewController.xib */; };
 		2BDF42EE2571F4FC004812E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF42ED2571F4FC004812E1 /* AppDelegate.swift */; };
 		2BDF42F02571F4FC004812E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF42EF2571F4FC004812E1 /* SceneDelegate.swift */; };
 		2BDF42F22571F4FC004812E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF42F12571F4FC004812E1 /* ViewController.swift */; };
 		2BDF42F52571F4FC004812E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF42F32571F4FC004812E1 /* Main.storyboard */; };
 		2BDF42F72571F4FD004812E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF42F62571F4FD004812E1 /* Assets.xcassets */; };
 		2BDF42FA2571F4FD004812E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF42F82571F4FD004812E1 /* LaunchScreen.storyboard */; };
+		2BDF43042571F578004812E1 /* SpeechEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF43032571F578004812E1 /* SpeechEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B29D36C2572F56C00D794EA /* RecorderPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderPlayer.swift; sourceTree = "<group>"; };
+		2B45D182257301100095998D /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		2B45D18525730EBD0095998D /* TranscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionViewController.swift; sourceTree = "<group>"; };
+		2B45D18625730EBD0095998D /* TranscriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranscriptionViewController.xib; sourceTree = "<group>"; };
 		2BDF42EA2571F4FC004812E1 /* Speech Recognition Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech Recognition Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDF42ED2571F4FC004812E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BDF42EF2571F4FC004812E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,7 @@
 		2BDF42F62571F4FD004812E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BDF42F92571F4FD004812E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BDF42FB2571F4FD004812E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BDF43032571F578004812E1 /* SpeechEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B45D18A25730EC90095998D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BDF42F12571F4FC004812E1 /* ViewController.swift */,
+				2B45D18525730EBD0095998D /* TranscriptionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2B45D18C25730ED20095998D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2B45D18625730EBD0095998D /* TranscriptionViewController.xib */,
+				2BDF42F32571F4FC004812E1 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2B45D18D25730EE00095998D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B45D182257301100095998D /* Recording.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B45D18F25730EEA0095998D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2BDF43032571F578004812E1 /* SpeechEngine.swift */,
+				2B29D36C2572F56C00D794EA /* RecorderPlayer.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		2BDF42E12571F4FC004812E1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +103,10 @@
 			children = (
 				2BDF42ED2571F4FC004812E1 /* AppDelegate.swift */,
 				2BDF42EF2571F4FC004812E1 /* SceneDelegate.swift */,
-				2BDF42F12571F4FC004812E1 /* ViewController.swift */,
-				2BDF42F32571F4FC004812E1 /* Main.storyboard */,
+				2B45D18F25730EEA0095998D /* Utilities */,
+				2B45D18D25730EE00095998D /* Models */,
+				2B45D18A25730EC90095998D /* Controllers */,
+				2B45D18C25730ED20095998D /* Storyboards */,
 				2BDF42F62571F4FD004812E1 /* Assets.xcassets */,
 				2BDF42F82571F4FD004812E1 /* LaunchScreen.storyboard */,
 				2BDF42FB2571F4FD004812E1 /* Info.plist */,
@@ -127,6 +174,7 @@
 				2BDF42FA2571F4FD004812E1 /* LaunchScreen.storyboard in Resources */,
 				2BDF42F72571F4FD004812E1 /* Assets.xcassets in Resources */,
 				2BDF42F52571F4FC004812E1 /* Main.storyboard in Resources */,
+				2B45D18825730EBD0095998D /* TranscriptionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B29D36D2572F56C00D794EA /* RecorderPlayer.swift in Sources */,
+				2B45D183257301100095998D /* Recording.swift in Sources */,
 				2BDF42F22571F4FC004812E1 /* ViewController.swift in Sources */,
 				2BDF42EE2571F4FC004812E1 /* AppDelegate.swift in Sources */,
+				2B45D18725730EBD0095998D /* TranscriptionViewController.swift in Sources */,
 				2BDF42F02571F4FC004812E1 /* SceneDelegate.swift in Sources */,
+				2BDF43042571F578004812E1 /* SpeechEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2DU9PB9JUU;
 				INFOPLIST_FILE = "Speech Recognition Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2DU9PB9JUU;
 				INFOPLIST_FILE = "Speech Recognition Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
