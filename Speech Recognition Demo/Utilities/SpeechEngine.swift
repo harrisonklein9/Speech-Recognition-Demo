@@ -72,6 +72,59 @@ open class SpeechEngine: NSObject {
             }
         }
     }
+    
+    // Inspired by Apple Sample app "SpokenWord"
+    /// Transcribes audio from live speech, text progress closure will return progress string as text is processed.
+    open func startTranscribing(textProgress: @escaping (String?) -> ()) {
+        recognitionTask?.cancel()
+        self.recognitionTask = nil
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        let inputNode = audioEngine.inputNode
+        
+        recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+        guard let recognitionRequest = recognitionRequest else {
+            print("Unable to create a SFSpeechAudioBufferRecognitionRequest object")
+            return
+        }
+        recognitionRequest.shouldReportPartialResults = true
+        var transcribedText: String!
+        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
+            if let result = result {
+                let transcription = result.bestTranscription
+                transcribedText = transcription.formattedString
+                textProgress(transcribedText)
+            }
+        })
+        
+        let recordingFormat = inputNode.outputFormat(forBus: 0)
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, time) in
+            self.recognitionRequest?.append(buffer)
+        }
+        
+        audioEngine.prepare()
+        do {
+            try audioEngine.start()
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    open func stopTranscribing() {
+        if audioEngine.isRunning {
+            audioEngine.stop()
+            audioEngine.inputNode.removeTap(onBus: 0)
+            recognitionRequest?.endAudio()
+        }
+    }
 }
 
 //MARK: - SFSpeechRecognizerDelegate
