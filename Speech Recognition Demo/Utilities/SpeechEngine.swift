@@ -65,7 +65,6 @@ open class SpeechEngine: NSObject {
             if let result = result {
                 let transcription = result.bestTranscription
                 transcribedText = transcription.formattedString
-                print(transcribedText ?? "")
                 textProgress(transcribedText)
                 if result.isFinal {
                     completion()
