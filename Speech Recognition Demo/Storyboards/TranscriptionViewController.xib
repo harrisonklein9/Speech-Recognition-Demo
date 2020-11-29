@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TranscriptionViewController" customModule="Speech_Recognition_Demo" customModuleProvider="target">
             <connections>
+                <outlet property="progressView" destination="CEY-Pu-m5c" id="AW3-EC-uuX"/>
                 <outlet property="titleLabel" destination="fXc-8G-VFY" id="FO6-ad-azG"/>
                 <outlet property="transcriptionLabel" destination="208-7L-PXO" id="2Dn-ZN-AT6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -33,15 +34,32 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEY-Pu-m5c">
+                    <rect key="frame" x="158.5" y="399.5" width="97" height="97"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-DO-tex">
+                            <rect key="frame" x="30" y="30" width="37" height="37"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fF7-DO-tex" secondAttribute="trailing" constant="30" id="2sR-vB-QC7"/>
+                        <constraint firstItem="fF7-DO-tex" firstAttribute="centerY" secondItem="CEY-Pu-m5c" secondAttribute="centerY" id="9aJ-Kk-1PJ"/>
+                        <constraint firstItem="fF7-DO-tex" firstAttribute="centerX" secondItem="CEY-Pu-m5c" secondAttribute="centerX" id="CmO-hw-xQN"/>
+                        <constraint firstAttribute="width" secondItem="CEY-Pu-m5c" secondAttribute="height" id="idt-e1-fi0"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fXc-8G-VFY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="4bX-xu-cQb"/>
                 <constraint firstItem="fXc-8G-VFY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="6p5-Ha-ecJ"/>
+                <constraint firstItem="CEY-Pu-m5c" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AUg-Va-OVY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="208-7L-PXO" secondAttribute="trailing" constant="20" id="Fsj-xi-Tzs"/>
                 <constraint firstItem="208-7L-PXO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="KAM-0a-LhB"/>
                 <constraint firstItem="208-7L-PXO" firstAttribute="top" secondItem="fXc-8G-VFY" secondAttribute="bottom" constant="10" id="Mna-lW-oS7"/>
+                <constraint firstItem="CEY-Pu-m5c" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XIU-vA-32b"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fXc-8G-VFY" secondAttribute="trailing" constant="20" id="sFj-gw-sSm"/>
             </constraints>
             <point key="canvasLocation" x="132" y="131"/>

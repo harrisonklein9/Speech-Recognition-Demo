@@ -58,14 +58,18 @@ open class SpeechEngine: NSObject {
     }
     
     /// Transribes audio from a localized recording, will return nil if audio is not able to be transcribed
-    open func transcribeAudio(fromUrl url: URL, completion: @escaping (String?) -> ()) {
+    open func transcribeAudio(fromUrl url: URL, textProgress: @escaping (String?) -> (), completion: @escaping () -> ()) {
         let request = SFSpeechURLRecognitionRequest(url: url)
         var transcribedText: String!
         speechRecognizer.recognitionTask(with: request) { (result, error) in
-            if let transcription = result?.bestTranscription {
+            if let result = result {
+                let transcription = result.bestTranscription
                 transcribedText = transcription.formattedString
                 print(transcribedText ?? "")
-                completion(transcribedText)
+                textProgress(transcribedText)
+                if result.isFinal {
+                    completion()
+                }
             }
         }
     }

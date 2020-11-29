@@ -9,6 +9,8 @@ import UIKit
 import Speech
 
 class TranscriptionViewController: UIViewController {
+    
+    @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var transcriptionLabel: UILabel!
     
@@ -18,15 +20,29 @@ class TranscriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupProgressView()
         setupView()
+    }
+    
+    private func setupProgressView() {
+        progressView.layer.cornerRadius = 10
+        progressView.layer.shadowColor = UIColor.black.cgColor
+        progressView.layer.shadowRadius = 4
+        progressView.layer.shadowOffset = .zero
+        progressView.layer.shadowOpacity = 0.5
     }
 
     private func setupView() {
         titleLabel.text = recording.name
         speechEngine.getStatus {
             if self.speechEngine.canRecognizeSpeech {
-                self.speechEngine.transcribeAudio(fromUrl: self.recording.path) {
+                DispatchQueue.main.async {
+                    self.progressView.isHidden = false
+                }
+                self.speechEngine.transcribeAudio(fromUrl: self.recording.path, textProgress: {
                     self.transcriptionLabel.text = $0
+                }) {
+                    self.progressView.isHidden = true
                 }
             }
         }
